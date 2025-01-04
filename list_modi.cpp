@@ -17,6 +17,7 @@ int main()
     //  replace(l.begin(),l.end(),20,100);// poriboton kora kaj kora ..
     // cout<<*next(l.begin(),2);
     auto it=find(l.begin(),l.end(),50);
+    
     if(it==l.end())
     {
         cout<<"Not_Found"<<endl;

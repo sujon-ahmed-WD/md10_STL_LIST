@@ -22,22 +22,25 @@ int main()
     a->next = b;
     b->next = c;
     c->next = d;
+    d->next = a;
     Node *slow = head;
     Node *fast = head;
-    bool flag=false;
-    while ()
+    bool flag = false;
+    while (fast != NULL && fast->next != NULL)
     {
         slow = slow->next;
         fast = fast->next->next;
         if (slow == fast)
         {
             // cycle detected
-            flag=true;
+            flag = true;
             break;
         }
-        cout<<"cycle detected"<<endl;
-        cout<<"No Cycle"<<endl;
     }
+    if (flag == true)
+        cout << "cycle detected";
+    else
+        cout << "No Cycle";
 
     return 0;
 }
